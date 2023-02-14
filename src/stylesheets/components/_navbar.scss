@@ -1,0 +1,87 @@
+@use "../abstracts/" as *;
+
+.navbar {
+  @include flex($justify: space-between);
+  padding: 50px 150px 70px;
+
+  @include tablet {
+    padding: 40px 24px 70px;
+  }
+
+  @include mobile {
+    padding: 40px 16px;
+  }
+
+  .navbar__logo {
+    font-size: 36px;
+    color: $primary-color;
+    flex: 2;
+
+    @include tablet {
+      font-size: 24px;
+    }
+
+    @include mobile {
+      flex: none;
+      font-size: 20px;
+    }
+  }
+
+  .nav-list {
+    flex: 3;
+    @include flex($justify: space-between, $align: center);
+    gap: 16px;
+
+    @include mobile {
+      display: none;
+    }
+
+    .nav-list__item {
+      .nav-link {
+        font-size: 18px;
+        text-transform: uppercase;
+        color: $white;
+
+        @include tablet {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .nav-list-icon {
+    @include flex($justify: flex-end, $align: center);
+    flex: 2;
+    gap: 40px;
+
+    @include tablet {
+      gap: 30px;
+    }
+
+    @include mobile {
+      flex: none;
+      gap: 24px;
+    }
+
+    .nav-img-icon {
+      @include tablet {
+        width: 20px;
+      }
+
+      @include mobile {
+        width: 16px;
+      }
+    }
+  }
+
+  .nav__menu {
+    display: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+      display: flex;
+    }
+  }
+}

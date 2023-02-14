@@ -1,0 +1,119 @@
+@use "../abstracts/" as *;
+
+.about-me-sec {
+  @include bg-img("../assets/images/Banner/Gregory-Francis.jpg");
+  object-fit: cover;
+  width: 100%;
+  object-position: center;
+  height: 590px;
+  color: $white;
+  @include flex($justify: flex-end);
+
+  @include tablet {
+    height: 315px;
+  }
+
+  .about-me-sec__main {
+    width: 360px;
+    margin-right: 248px;
+
+    @include tablet {
+      width: 282px;
+      margin-right: 87px;
+    }
+
+    @include mobile {
+      width: 240px;
+      margin: 0 auto;
+    }
+
+    .about-me-sec__title {
+      margin-top: 229px;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 42px;
+      letter-spacing: -0.025em;
+      margin-right: 5px;
+      margin-bottom: 12px;
+
+      @include tablet {
+        margin-top: 103px;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.025em;
+        margin-bottom: 5px;
+      }
+
+      @include mobile {
+        margin-top: 34px;
+      }
+    }
+
+    .about-me-sec__sub-title {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      letter-spacing: 0.0555556em;
+      margin-right: 16px;
+      margin-bottom: 12px;
+
+      @include tablet {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.0666667em;
+        margin-bottom: 16px;
+      }
+
+      @include mobile {
+        margin-bottom: 24px;
+      }
+    }
+
+    .about-me-sec__msg {
+      font-size: 16px;
+      line-height: 24px;
+      position: relative;
+
+      @include tablet {
+        font-size: 11px;
+        line-height: 16px;
+      }
+
+      .list-dot {
+        position: absolute;
+        right: -89px;
+        top: 0;
+
+        @include tablet {
+          right: -42px;
+        }
+
+        @include mobile {
+          display: flex;
+          top: auto;
+          bottom: -50px;
+          gap: 9px;
+          right: 50%;
+          transform: translateX(50%);
+        }
+
+        & :nth-child(1) {
+          background-color: white;
+        }
+        .list-dot__item {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          border: 2px solid $white;
+          margin-bottom: 10px;
+
+          @include tablet {
+            width: 8px;
+            height: 8px;
+            border: 1px solid $white;
+          }
+        }
+      }
+    }
+  }
+}

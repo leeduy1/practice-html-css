@@ -1,0 +1,109 @@
+@use "../abstracts/" as *;
+
+.testimonials-sec-card {
+  border-radius: 8px;
+  margin-bottom: 12px;
+  width: 554px;
+  display: flex;
+  padding-top: 46px;
+  padding-bottom: 48px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  @include tablet {
+    width: 345px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  @include mobile {
+    width: 290px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .card-img {
+    width: 96px;
+    margin-right: 24px;
+    padding-left: 41px;
+
+    @include tablet {
+      width: 64px;
+      margin-right: 27px;
+      padding-left: 19px;
+    }
+
+    @include mobile {
+      width: 48px;
+      padding-left: 9px;
+      margin-right: 18px;
+    }
+  }
+
+  .card-main {
+    .card-main__title {
+      font-size: 16px;
+      color: $text-color;
+      letter-spacing: 0.0625em;
+      font-weight: 400;
+      text-transform: uppercase;
+
+      @include tablet {
+        font-size: 12px;
+        letter-spacing: 0.0666667em;
+      }
+    }
+
+    .card-main__sub-title {
+      color: $text-sub-color;
+      font-size: 16px;
+      line-height: 32px;
+
+      @include tablet {
+        font-size: 12px;
+        line-height: 16px;
+        margin-top: 8px;
+      }
+    }
+
+    .crossbar {
+      width: 320px;
+      height: 2px;
+      background: #f6f6f6;
+      margin-bottom: 30px;
+      margin-top: 12px;
+
+      @include tablet {
+        width: 200px;
+        margin-top: 4px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .card-main__paragraph {
+      width: 351px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: $text-color;
+      margin-bottom: 24px;
+
+      @include tablet {
+        width: 200px;
+        font-size: 11px;
+        line-height: 16px;
+      }
+
+      @include mobile {
+        margin-bottom: 18px;
+      }
+    }
+
+    .list-icon {
+      @include flex($align: center);
+    }
+  }
+}

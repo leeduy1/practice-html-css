@@ -1,0 +1,19 @@
+<div class="testimonials-sec-card">
+    <figure class="card-img">
+        <img src="{{src}}"></img>
+    </figure>
+    <div class="card-main">
+        <h1 class="card-main__title">{{title}}</h1>
+        <div class="card-main__sub-title">{{subTitle}}</div>
+        <div class="crossbar"></div>
+        <p class="card-main__paragraph">{{paragraph}}</p>
+        <div class="list-icon">
+            <include src="./components/list-icon.html"
+            locals='{
+                        "classList": "testimonials-icon",
+                        "listIcon": "{{listIcon}}"
+                    }'
+            ></include>
+        </div>
+    </div>
+</div>

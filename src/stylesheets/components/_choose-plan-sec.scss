@@ -1,0 +1,79 @@
+@use "../abstracts/" as *;
+
+.choose-plan {
+  background: #f6f6f6;
+  padding-top: 68px;
+  padding-bottom: 116px;
+
+  @include tablet {
+    padding-top: 56px;
+    padding-bottom: 80px;
+  }
+
+  @include mobile {
+    padding-top: 52px;
+    padding-bottom: 40px;
+  }
+
+  .choose-plan__title {
+    font-size: 44px;
+    line-height: 48px;
+    font-weight: 400;
+    color: $text-color;
+    text-align: center;
+
+    @include tablet {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    @include mobile {
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+
+  .choose-plan__list-card {
+    @include flex($justify: center);
+    gap: 68px;
+    margin-top: 52px;
+
+    @include tablet {
+      margin-top: 32px;
+      gap: 43px;
+    }
+
+    @include mobile {
+      position: relative;
+    }
+  }
+
+  .btn__list {
+    display: none;
+
+    @include mobile {
+      margin-top: 44px;
+      @include flex($justify: center);
+    }
+
+    .btn__list--silver,
+    .btn__list--platinum {
+      border: none;
+      background-color: transparent;
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    .btn__list--gold {
+      width: 80px;
+      height: 24px;
+      background: #ebcb80;
+      border-radius: 48px;
+      border: none;
+      letter-spacing: 0.0666667em;
+      color: $text-color;
+      font-size: 12px;
+      margin: 0 12px;
+    }
+  }
+}

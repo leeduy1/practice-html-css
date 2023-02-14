@@ -1,0 +1,22 @@
+<div class="choose-plan-card {{class}}">
+  <div class="card-main">
+    <h2 class="card__title">{{title}}</h2>
+    <div class="card__price">
+      <span class="price-unit">$</span>
+      <span class="price-number">{{price}}</span>
+    </div>
+    <h2 class="card__year">YEAR</h2>
+    <ul class="introduce-list">
+      <li class="introduce-list__item">{{introduce1}}</li>
+      <li class="introduce-list__item">{{introduce2}}</li>
+      <li class="introduce-list__item">{{introduce3}}</li>
+    </ul>
+    <include
+      src="./components/button.html"
+      locals='{
+        "class": "{{classButton}}",
+        "name": "PURCHASE"
+        }'
+    ></include>
+  </div>
+</div>

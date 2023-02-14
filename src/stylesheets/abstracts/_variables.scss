@@ -1,0 +1,23 @@
+// Font family
+$font-family: "Roboto", sans-serif;
+
+// Breakpoints
+$medium: 768px;
+$extra-lager: 1200px;
+
+$mobile: calc($medium - 1px);
+$tablet: calc($extra-lager - 1px);
+
+$white: #fff;
+
+//color
+$text-color: #4b4b4b;
+$text-sub-color: #7d7d7d;
+$primary-color: #ebcb80;
+$background-color: #ffffff;
+
+$box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+$box-shadow-second: 0px 2px 4px rgba(0, 0, 0, 0.2);
+
+$input-placehoder: #7d7d7d;
+$border-bottom-input: #7d7d7d;

@@ -1,0 +1,1 @@
+{"mappings":"AACE;;;;AAIA","sources":["src/stylesheets/layout/_header.scss"],"sourcesContent":["header {\r\n  .header__test {\r\n    position: relative;\r\n  }\r\n\r\n  .main-heading-sec {\r\n    padding: 100px 0;\r\n    background-color: red;\r\n  }\r\n}\r\n"],"names":[],"version":3,"file":"index.8ca50a4b.css.map","sourceRoot":"/__parcel_source_root/"}

@@ -1,0 +1,27 @@
+<div class="navbar">
+  <a href="#" class="navbar__logo">H.</a>
+  <ul class="nav-list">
+    <include
+      src="./components/nav-list.html"
+      locals='{
+                  "classList": "nav-list__item",
+                  "classLink": "nav-link",
+                  "list": "[`hotels`, `airlnes`, `vacations`, `find more`]"        
+              }'
+    ></include>
+  </ul>
+  <ul class="nav-list-icon">
+    <include
+      src="./components/nav-list-icon.html"
+      locals='{
+                  "classList": "nav-list-icon__item",
+                  "classLink": "nav-link-icon",
+                  "classImg": "nav-img-icon",
+                  "listSrc": "[`../assets/icons/twitter.svg`, `../assets/icons/facebook.svg`, `../assets/icons/instagram.svg`]"        
+              }'
+    ></include>
+  </ul>
+  <div class="nav__menu">
+    <img src="../assets/icons/Hamburger.svg" alt="" />
+  </div>
+</div>

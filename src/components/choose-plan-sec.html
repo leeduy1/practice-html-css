@@ -1,0 +1,46 @@
+<section class="choose-plan">
+  <h1 class="choose-plan__title">Choose Your Plan</h1>
+  <div class="choose-plan__list-card">
+    <include
+      src="./components/choose-plan-sec-card.html"
+      locals='{
+          "class": "silver",
+          "title": "SILVER",
+          "price": "49",  
+          "introduce1": "Personal Account",
+          "introduce2": "25 GB Discspace",
+          "introduce3": "50 Uploads per day",
+          "classButton": ""
+      }'
+    ></include>
+    <include
+      src="./components/choose-plan-sec-card.html"
+      locals='{
+          "class": "gold",
+          "title": "GOLD",
+          "price": "99",  
+          "introduce1": "Personal Account",
+          "introduce2": "50 GB Discspace",
+          "introduce3": "500 Uploads per day",
+          "classButton": "button-dark"
+      }'
+    ></include>
+    <include
+      src="./components/choose-plan-sec-card.html"
+      locals='{
+          "class": "platinum",
+          "title": "PLATINUM",
+          "price": "299",  
+          "introduce1": "Team Account",
+          "introduce2": "500 GB Discspace",
+          "introduce3": "Unlimited Uploads per day",
+          "classButton": "" 
+      }'
+    ></include>
+  </div>
+  <div class="btn__list">
+    <button class="btn__list--silver">SILVER</button>
+    <button class="btn__list--gold">GOLD</button>
+    <button class="btn__list--platinum">PLATINUM</button>
+  </div>
+</section>

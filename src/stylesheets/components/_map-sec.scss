@@ -1,0 +1,65 @@
+@use "../abstracts/" as *;
+
+.map-sec {
+  background-color: #d8d8d8;
+  height: 400px;
+  position: relative;
+  top: -3px;
+  padding-top: 201px;
+  padding-left: 761px;
+
+  @include tablet {
+    height: 216px;
+    padding-top: 67px;
+    padding-left: 372px;
+    background-color: $white;
+  }
+
+  @include mobile {
+    height: 268px;
+    padding-left: 77px;
+    padding-top: 92px;
+  }
+
+  .map-tooltip {
+    width: 190px;
+    height: 70px;
+    position: relative;
+
+    background: linear-gradient(
+        191.52deg,
+        rgba(255, 255, 255, 0.301404) 5.01%,
+        rgba(255, 255, 255, 0.0001) 91.53%
+      ),
+      #ebcb80;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -12px;
+      right: 50%;
+      transform: translateX(50%);
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 20px solid $primary-color;
+    }
+
+    .map-tooltip__msg {
+      font-size: 12px;
+      line-height: 14px;
+      color: $text-color;
+      padding-top: 21px;
+      padding-left: 29px;
+
+      @include tablet {
+        font-size: 12px;
+        line-height: 16px;
+        padding-left: 29px;
+      }
+    }
+  }
+}

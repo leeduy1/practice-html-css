@@ -1,0 +1,204 @@
+@use "../abstracts/" as *;
+
+.choose-plan-card {
+  background: #4b4b4b;
+  border-radius: 8px;
+  width: 270px;
+
+  @include tablet {
+    width: 170px;
+  }
+
+  .card-main {
+    width: 100%;
+    background: linear-gradient(
+      225deg,
+      rgba(255, 255, 255, 0.496575) 0%,
+      rgba(255, 255, 255, 0.0001) 100%
+    );
+    border-radius: 8px;
+    padding: 40px 0 36px 0;
+    text-align: center;
+
+    @include tablet {
+      padding: 22px 0 32px 0;
+    }
+
+    @include mobile {
+      padding: 14px 0 28px 0;
+    }
+
+    .card__title {
+      font-size: 18px;
+      line-height: 27px;
+      color: $primary-color;
+      margin-bottom: 30px;
+      font-family: "Lucida Grande";
+
+      @include tablet {
+        font-size: 12px;
+        line-height: 27px;
+        margin-bottom: 12px;
+      }
+
+      @include mobile {
+        margin-top: 7px;
+        margin-bottom: 0;
+      }
+    }
+
+    .card__price {
+      margin-bottom: 15px;
+      display: inline-block;
+      position: relative;
+
+      @include tablet {
+        margin-bottom: 0;
+      }
+
+      .price-unit {
+        position: absolute;
+        top: 0;
+        left: -20px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        color: $white;
+
+        @include tablet {
+          font-size: 11px;
+          line-height: 13px;
+          top: 12px;
+          left: -12px;
+        }
+
+        @include mobile {
+          top: 4px;
+        }
+      }
+
+      .price-number {
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 48px;
+        color: $white;
+        display: block;
+
+        @include tablet {
+          font-size: 36px;
+        }
+
+        @include mobile {
+          line-height: 36px;
+          margin-bottom: 12px;
+        }
+      }
+    }
+
+    .card__year {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      color: $white;
+      margin-bottom: 21px;
+      letter-spacing: 0.0555556em;
+
+      @include tablet {
+        font-size: 12px;
+        line-height: 12px;
+      }
+
+      @include mobile {
+        margin-bottom: 12px;
+      }
+    }
+
+    .introduce-list {
+      margin-bottom: 30px;
+
+      @include tablet {
+        margin-bottom: 16px;
+      }
+
+      @include mobile {
+        margin-bottom: 20px;
+      }
+      .introduce-list__item {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $white;
+
+        @include tablet {
+          font-size: 11px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+
+  &.silver {
+    @include mobile {
+      width: 160px;
+      position: absolute;
+      top: -10px;
+      z-index: 1;
+    }
+  }
+
+  &.gold {
+    background: linear-gradient(
+      225deg,
+      rgba(255, 255, 255, 0.496575) 0%,
+      rgba(255, 255, 255, 0.0001) 100%
+    );
+
+    @include mobile {
+      width: 190.5px;
+      z-index: 2;
+    }
+
+    .card-main {
+      background: $primary-color;
+
+      .card__title {
+        color: $text-color;
+      }
+
+      .card__price {
+        .price-unit,
+        .price-number {
+          color: $text-color;
+        }
+      }
+
+      .card__year {
+        color: $text-color;
+      }
+
+      .introduce-list {
+        .introduce-list__item {
+          color: $text-color;
+        }
+      }
+    }
+  }
+
+  &.platinum {
+    background: linear-gradient(
+      223.49deg,
+      rgba(0, 0, 0, 0.0001) 4.85%,
+      rgba(0, 0, 0, 0.401127) 96.5%
+    );
+
+    @include mobile {
+      width: 140px;
+      position: absolute;
+      top: -19px;
+    }
+
+    .card-main {
+      background: #4b4b4b;
+    }
+  }
+}

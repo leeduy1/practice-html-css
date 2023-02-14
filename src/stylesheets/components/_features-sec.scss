@@ -1,0 +1,103 @@
+@use "../abstracts/" as *;
+
+.features-sec {
+  padding: 80px 0 60px 0;
+  max-width: 1170px;
+  margin: 0 auto;
+
+  @include tablet {
+    padding: 46px 0 40px 0;
+  }
+
+  @include mobile {
+    padding: 32px 0 36px 0;
+  }
+
+  .features-sec__title {
+    font-size: 44px;
+    color: $text-color;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 32px;
+
+    @include tablet {
+      font-size: 32px;
+      margin-bottom: 22px;
+    }
+
+    @include mobile {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+  }
+  .features-sec__sub-title {
+    font-size: 18px;
+    color: $text-sub-color;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 55px;
+    text-transform: uppercase;
+
+    @include tablet {
+      font-size: 12px;
+      margin-bottom: 48px;
+    }
+
+    @include mobile {
+      font-size: 12px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .features-sec__main {
+    position: relative;
+
+    @include tablet {
+      padding-left: 50px;
+      gap: 0px;
+    }
+
+    @include mobile {
+      margin: 0 auto;
+      padding-left: 0;
+    }
+
+    .features-sec-cards {
+      width: 320px;
+      padding-top: 20px;
+
+      @include tablet {
+        width: 260px;
+        padding-top: 40px;
+      }
+
+      @include mobile {
+        max-width: 320px;
+        padding: 0;
+        margin: 0 auto;
+      }
+    }
+
+    .features-sec__img {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 802px;
+
+      @include tablet {
+        left: 350px;
+      }
+
+      @include mobile {
+        width: 100%;
+        position: static;
+        padding: 0 15px;
+      }
+
+      img {
+        object-fit: contain;
+        vertical-align: middle;
+      }
+    }
+  }
+}
