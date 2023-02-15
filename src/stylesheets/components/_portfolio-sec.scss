@@ -61,7 +61,7 @@
         left: 25px;
       }
 
-      .item__title {
+      .item-content__title {
         font-weight: 400;
         font-size: 32px;
         line-height: 42px;
@@ -81,7 +81,7 @@
         }
       }
 
-      .item__date {
+      .item-content__date {
         font-weight: 400;
         font-size: 18px;
         line-height: 30px;
@@ -121,7 +121,7 @@
         }
       }
 
-      .item__msg {
+      .item-content__msg {
         font-weight: 400;
         font-size: 16px;
         line-height: 24px;
@@ -134,7 +134,7 @@
         }
       }
 
-      .item__socials {
+      .item-content__socials {
         @include flex();
         gap: 67px;
 
@@ -142,7 +142,7 @@
           gap: 50px;
         }
 
-        .item__social--eye {
+        .item-content__social--eye {
           position: relative;
           @include mobile {
             top: -130px;
@@ -150,10 +150,10 @@
           }
 
           &::before {
-            content: "9292";
+            content: "92924";
             position: absolute;
             font-weight: 400;
-            top: -10px;
+            top: 2px;
             font-size: 12px;
             left: 22px;
 
@@ -165,26 +165,9 @@
               display: none;
             }
           }
-
-          &::after {
-            content: "4";
-            position: absolute;
-            bottom: -10px;
-            font-size: 12px;
-            left: 22px;
-
-            @include tablet {
-              bottom: 2px;
-              left: 49px;
-            }
-
-            @include mobile {
-              display: none;
-            }
-          }
         }
 
-        .item__social--like {
+        .item-content__social--like {
           position: relative;
           @include mobile {
             display: none;
@@ -198,7 +181,7 @@
           }
         }
 
-        .item__social--comments {
+        .item-content__social--comments {
           position: relative;
 
           @include mobile {
@@ -206,28 +189,15 @@
           }
 
           &::before {
-            content: "489";
+            content: "4894";
             position: absolute;
             font-weight: 400;
-            top: -10px;
+            top: 1px;
             font-size: 12px;
             left: 20px;
 
             @include tablet {
               top: 2px;
-            }
-          }
-
-          &::after {
-            content: "4";
-            position: absolute;
-            bottom: -10px;
-            font-size: 12px;
-            left: 20px;
-
-            @include tablet {
-              bottom: 2px;
-              left: 40px;
             }
           }
         }
@@ -424,6 +394,7 @@
 
       @include tablet {
         margin-right: 12px;
+        transform: translateY(2px);
       }
 
       @include mobile {
@@ -434,8 +405,13 @@
     .list-btn__item--next {
       margin-left: 24px;
 
+      @include tablet {
+        margin-left: 12px;
+      }
+
       @include mobile {
         margin-left: 0;
+        transform: translateY(3px);
       }
     }
   }

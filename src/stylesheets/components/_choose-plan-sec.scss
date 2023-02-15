@@ -48,23 +48,27 @@
     }
   }
 
-  .btn__list {
+  .btn-list {
     display: none;
+
+    .btn-list__item {
+      width: 80px;
+      height: 24px;
+      border-radius: 48px;
+      border: none;
+      letter-spacing: 0.0666667em;
+      color: $text-color;
+      font-size: 12px;
+      margin: 0 12px;
+      background-color: transparent;
+    }
 
     @include mobile {
       margin-top: 44px;
       @include flex($justify: center);
     }
 
-    .btn__list--silver,
-    .btn__list--platinum {
-      border: none;
-      background-color: transparent;
-      font-size: 12px;
-      line-height: 16px;
-    }
-
-    .btn__list--gold {
+    .btn-list__item--gold {
       width: 80px;
       height: 24px;
       background: #ebcb80;

@@ -1,8 +1,6 @@
 @use "../abstracts/" as *;
 
 .footer {
-  position: relative;
-  top: -3px;
   height: 374px;
   background-color: #4b4b4b;
   color: $white;
@@ -243,8 +241,8 @@
           }
         }
 
-        .list__icon {
-          svg {
+        .list-icon {
+          .list-icon__item {
             margin-right: 32px;
 
             @include tablet {
@@ -256,37 +254,37 @@
             }
           }
 
-          .list__icon--pinterset {
+          .list-icon__item--pinterset {
             @include tablet {
               width: 18px;
               height: 18px;
             }
           }
-          .list__icon--linkedin {
+          .list-icon__item--linkedin {
             @include tablet {
               width: 18px;
               height: 18px;
             }
           }
-          .list__icon--google {
+          .list-icon__item--google {
             @include tablet {
               width: 26px;
               height: 17px;
             }
           }
-          .list__icon--twitter {
+          .list-icon__item--twitter {
             @include tablet {
               width: 22px;
               height: 18px;
             }
           }
-          .list__icon--facebook {
+          .list-icon__item--facebook {
             @include tablet {
               width: 18px;
               height: 18px;
             }
           }
-          .list__icon--instagram {
+          .list-icon__item--instagram {
             @include tablet {
               width: 18px;
               height: 18px;

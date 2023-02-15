@@ -1,6 +1,6 @@
 @use "../abstracts/" as *;
 
-.choose-plan-card {
+.list-card__item {
   background: #4b4b4b;
   border-radius: 8px;
   width: 270px;
@@ -9,7 +9,7 @@
     width: 170px;
   }
 
-  .card-main {
+  .item-main {
     width: 100%;
     background: linear-gradient(
       225deg,
@@ -28,7 +28,7 @@
       padding: 14px 0 28px 0;
     }
 
-    .card__title {
+    .item-main__title {
       font-size: 18px;
       line-height: 27px;
       color: $primary-color;
@@ -47,7 +47,7 @@
       }
     }
 
-    .card__price {
+    .item-main__price {
       margin-bottom: 15px;
       display: inline-block;
       position: relative;
@@ -56,7 +56,7 @@
         margin-bottom: 0;
       }
 
-      .price-unit {
+      .item-main__price--unit {
         position: absolute;
         top: 0;
         left: -20px;
@@ -77,7 +77,7 @@
         }
       }
 
-      .price-number {
+      .item-main__price--number {
         font-weight: 400;
         font-size: 64px;
         line-height: 48px;
@@ -95,7 +95,7 @@
       }
     }
 
-    .card__year {
+    .item-main__year {
       font-weight: 400;
       font-size: 18px;
       line-height: 27px;
@@ -137,7 +137,7 @@
     }
   }
 
-  &.silver {
+  &.list-card__item--silver {
     @include mobile {
       width: 160px;
       position: absolute;
@@ -146,7 +146,7 @@
     }
   }
 
-  &.gold {
+  &.list-card__item--gold {
     background: linear-gradient(
       225deg,
       rgba(255, 255, 255, 0.496575) 0%,
@@ -158,21 +158,21 @@
       z-index: 2;
     }
 
-    .card-main {
+    .item-main {
       background: $primary-color;
 
-      .card__title {
+      .item-main__title {
         color: $text-color;
       }
 
-      .card__price {
-        .price-unit,
-        .price-number {
+      .item-main__price {
+        .item-main__price--unit,
+        .item-main__price--number {
           color: $text-color;
         }
       }
 
-      .card__year {
+      .item-main__year {
         color: $text-color;
       }
 
@@ -184,7 +184,7 @@
     }
   }
 
-  &.platinum {
+  &.list-card__item--platinum {
     background: linear-gradient(
       223.49deg,
       rgba(0, 0, 0, 0.0001) 4.85%,
@@ -197,7 +197,7 @@
       top: -19px;
     }
 
-    .card-main {
+    .item-main {
       background: #4b4b4b;
     }
   }
