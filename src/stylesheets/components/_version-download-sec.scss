@@ -1,49 +1,49 @@
 @use "../abstracts/" as *;
+
 .version-download-sec {
   @include bg-img("../assets/images/version/version.svg");
-  @include flex($direction: column, $align: center);
-  height: 588px;
+  height: 312px;
   text-align: center;
+  padding-top: 45px;
 
   @include tablet {
     height: 314px;
+    padding-top: 57px;
   }
 
-  @include mobile {
-    height: 312px;
+  @include desktop {
+    height: 588px;
+    padding-top: 163px;
   }
 
   .version-download-sec__title {
-    margin-top: 163px;
-    font-style: normal;
+    font-size: 20px;
+    margin-bottom: 7px;
     color: $white;
-    font-size: 44px;
-    line-height: 48px;
+    font-style: normal;
+    letter-spacing: -0.025em;
+    line-height: 40px;
     font-weight: 400;
-    margin-bottom: 24px;
 
     @include tablet {
       font-size: 32px;
-      line-height: 40px;
       margin-bottom: 26px;
-      margin-top: 57px;
     }
 
-    @include mobile {
-      font-size: 20px;
-      margin-top: 45px;
-      margin-bottom: 7px;
+    @include desktop {
+      font-size: 44px;
+      line-height: 48px;
+      margin-bottom: 24px;
     }
   }
   .version-download-sec__paragraph {
-    width: 555px;
-    font-weight: 400;
-    font-size: 16px;
+    width: 240px;
+    margin-bottom: 20px;
     color: $white;
-    margin-bottom: 42px;
-    line-height: 24px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 11px;
+    line-height: 16px;
 
     @include tablet {
       font-size: 11px;
@@ -51,9 +51,11 @@
       width: 472px;
     }
 
-    @include mobile {
-      width: 240px;
-      margin-bottom: 20px;
+    @include desktop {
+      width: 555px;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 42px;
     }
   }
 }

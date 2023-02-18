@@ -1,50 +1,49 @@
 @use "../abstracts/" as *;
 
 .testimonials-sec {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding-top: 72px;
-  padding-bottom: 47px;
+  padding-top: 30px;
 
   @include tablet {
-    max-width: 1000px;
     margin: 0 auto;
     padding-top: 41px;
     padding-bottom: 16px;
   }
 
-  @include mobile {
-    padding-top: 30px;
-    padding-bottom: 0;
+  @include desktop {
+    padding-top: 72px;
+    padding-bottom: 47px;
   }
 
   .testimonials-sec__title {
-    font-size: 44px;
+    font-size: 20px;
+    line-height: 40px;
     font-weight: 400;
-    line-height: 48px;
     color: $text-color;
     text-align: center;
+    letter-spacing: -0.025em;
 
     @include tablet {
       font-size: 32px;
       line-height: 40px;
     }
 
-    @include mobile {
-      font-size: 20px;
-      line-height: 40px;
+    @include desktop {
+      font-size: 44px;
+      line-height: 48px;
     }
   }
 
   .testimonials-sec__list-card {
-    column-gap: 31px;
-    margin-top: 28px;
-    margin-bottom: 16px;
-    @include flex($justify: center, $wrap: wrap, $align: flex-start);
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 31px;
+    }
 
-    @include mobile {
-      padding: 0 15px;
-      margin-top: 15px;
+    @include desktop {
+      margin-top: 29px;
     }
   }
 }

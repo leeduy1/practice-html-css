@@ -1,87 +1,103 @@
 @use "../abstracts/" as *;
 
 .navbar {
-  @include flex($justify: space-between);
-  padding: 50px 150px 70px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 21px;
 
   @include tablet {
-    padding: 40px 24px 70px;
+    padding-top: 32px;
   }
 
-  @include mobile {
-    padding: 40px 16px;
+  @include desktop {
+    padding-top: 48px;
   }
 
   .navbar__logo {
-    font-size: 36px;
+    line-height: 23px;
+    font-size: 20px;
     color: $primary-color;
-    flex: 2;
+    letter-spacing: 0.0554719em;
 
     @include tablet {
+      flex: 1;
       font-size: 24px;
+      line-height: 28px;
     }
 
-    @include mobile {
-      flex: none;
-      font-size: 20px;
+    @include desktop {
+      font-size: 36px;
+      line-height: 42px;
     }
   }
 
   .nav-list {
-    flex: 3;
-    @include flex($justify: space-between, $align: center);
-    gap: 16px;
+    display: none;
 
-    @include mobile {
-      display: none;
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 2;
+      text-transform: uppercase;
+      gap: 32px;
     }
 
     .nav-list__item {
       .nav-link {
-        font-size: 18px;
-        text-transform: uppercase;
         color: $white;
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 400;
 
         @include tablet {
-          font-size: 12px;
+          letter-spacing: 0.0832079em;
+        }
+
+        @include desktop {
+          letter-spacing: 0.0555556em;
+          font-size: 18px;
+          line-height: 21px;
         }
       }
     }
   }
 
   .nav-list-icon {
-    @include flex($justify: flex-end, $align: center);
-    flex: 2;
-    gap: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
 
     @include tablet {
-      gap: 30px;
+      flex: 1;
     }
 
-    @include mobile {
-      flex: none;
-      gap: 24px;
+    @include desktop {
+      gap: 42px;
     }
 
     .nav-img-icon {
+      width: 16px;
+
       @include tablet {
         width: 20px;
       }
 
-      @include mobile {
-        width: 16px;
+      @include desktop {
+        width: 30px;
       }
     }
   }
 
   .nav__menu {
-    display: none;
     cursor: pointer;
     align-items: center;
     justify-content: center;
+    display: flex;
 
-    @include mobile {
-      display: flex;
+    @include tablet {
+      display: none;
     }
   }
 }

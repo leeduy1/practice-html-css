@@ -1,36 +1,24 @@
 @use "../abstracts/" as *;
 
 .map-sec {
-  background-color: #d8d8d8;
-  height: 400px;
+  height: 268px;
   position: relative;
 
   @include tablet {
     height: 216px;
-    background-color: $white;
   }
 
-  @include mobile {
-    height: 268px;
+  @include desktop {
+    height: 400px;
+    background-color: #d8d8d8;
   }
 
   .map-tooltip {
     width: 190px;
     height: 70px;
+    top: 92px;
+    right: 53px;
     position: absolute;
-    top: 201px;
-    right: 489px;
-
-    @include tablet {
-      top: 67px;
-      right: 206px;
-    }
-
-    @include mobile {
-      top: 92px;
-      right: 53px;
-    }
-
     background: linear-gradient(
         191.52deg,
         rgba(255, 255, 255, 0.301404) 5.01%,
@@ -39,6 +27,16 @@
       #ebcb80;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
     border-radius: 4px;
+
+    @include tablet {
+      top: 67px;
+      right: 206px;
+    }
+
+    @include desktop {
+      top: 201px;
+      right: 489px;
+    }
 
     &::after {
       content: "";
@@ -55,16 +53,9 @@
 
     .map-tooltip__msg {
       font-size: 12px;
-      line-height: 14px;
-      color: $text-color;
+      line-height: 16px;
       padding-top: 21px;
       padding-left: 29px;
-
-      @include tablet {
-        font-size: 12px;
-        line-height: 16px;
-        padding-left: 29px;
-      }
     }
   }
 }

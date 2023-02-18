@@ -2,15 +2,11 @@
 $font-family: "Roboto", sans-serif;
 
 // Breakpoints
-$medium: 768px;
-$extra-lager: 1200px;
-
-$mobile: calc($medium - 1px);
-$tablet: calc($extra-lager - 1px);
-
-$white: #fff;
+$tablet: 768px;
+$desktop: 1200px;
 
 //color
+$white: #fff;
 $text-color: #4b4b4b;
 $text-sub-color: #7d7d7d;
 $primary-color: #ebcb80;

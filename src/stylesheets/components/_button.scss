@@ -1,25 +1,25 @@
 @use "../abstracts/" as *;
 
 .button {
-  width: 210px;
-  height: 48px;
   background-color: $primary-color;
   border-radius: 50px;
   color: #3c3c3c;
-  font-size: 16px;
   border: none;
   cursor: pointer;
   text-transform: uppercase;
+  width: 140px;
+  height: 32px;
+  font-size: 11px;
 
   @include tablet {
     width: 140px;
     height: 40px;
-    font-size: 11px;
   }
 
-  @include mobile {
-    width: 140px;
-    height: 32px;
+  @include desktop {
+    width: 210px;
+    height: 48px;
+    font-size: 16px;
   }
 
   &.button-dark {

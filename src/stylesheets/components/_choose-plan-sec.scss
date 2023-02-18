@@ -2,54 +2,63 @@
 
 .choose-plan {
   background: #f6f6f6;
-  padding-top: 68px;
-  padding-bottom: 116px;
+  padding-top: 52px;
+  padding-bottom: 40px;
 
   @include tablet {
     padding-top: 56px;
     padding-bottom: 80px;
   }
 
-  @include mobile {
-    padding-top: 52px;
-    padding-bottom: 40px;
+  @include desktop {
+    padding-top: 68px;
+    padding-bottom: 116px;
   }
 
   .choose-plan__title {
-    font-size: 44px;
-    line-height: 48px;
     font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
     color: $text-color;
     text-align: center;
+    margin-bottom: 52px;
 
     @include tablet {
       font-size: 32px;
       line-height: 40px;
+      margin-bottom: 32px;
     }
 
-    @include mobile {
-      font-size: 20px;
-      line-height: 23px;
+    @include desktop {
+      font-size: 44px;
+      line-height: 48px;
+      margin-bottom: 52px;
     }
   }
 
   .choose-plan__list-card {
-    @include flex($justify: center);
-    gap: 68px;
-    margin-top: 52px;
+    display: flex;
+    position: relative;
+    justify-content: center;
 
     @include tablet {
-      margin-top: 32px;
+      position: static;
       gap: 43px;
     }
 
-    @include mobile {
-      position: relative;
+    @include desktop {
+      gap: 68px;
     }
   }
 
   .btn-list {
-    display: none;
+    margin-top: 44px;
+    display: flex;
+    justify-content: center;
+
+    @include tablet {
+      display: none;
+    }
 
     .btn-list__item {
       width: 80px;
@@ -61,11 +70,6 @@
       font-size: 12px;
       margin: 0 12px;
       background-color: transparent;
-    }
-
-    @include mobile {
-      margin-top: 44px;
-      @include flex($justify: center);
     }
 
     .btn-list__item--gold {
