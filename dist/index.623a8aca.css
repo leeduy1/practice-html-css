@@ -1962,14 +1962,19 @@ body {
 
 .button {
   color: #3c3c3c;
-  cursor: pointer;
   text-transform: uppercase;
   width: 140px;
   height: 32px;
+  cursor: pointer;
   background-color: #ebcb80;
   border: none;
   border-radius: 50px;
   font-size: 11px;
+  transition: all .2s ease-in-out;
+}
+
+.button:hover {
+  opacity: .9;
 }
 
 @media screen and (min-width: 768px) {

@@ -5,11 +5,16 @@
   border-radius: 50px;
   color: #3c3c3c;
   border: none;
-  cursor: pointer;
   text-transform: uppercase;
   width: 140px;
   height: 32px;
   font-size: 11px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 0.9;
+  }
 
   @include tablet {
     width: 140px;
