@@ -1518,22 +1518,30 @@ body {
 
 .about-me-sec .container {
   height: 100%;
+  position: relative;
 }
 
-@media screen and (min-width: 768px) {
-  .about-me-sec .container {
-    position: relative;
-  }
-}
-
-.about-me-sec .about-me-sec__main {
+.about-me-sec .about-me-list {
   width: 240px;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  -webkit-scroll-snap-points-x: repeat(240px);
+  -ms-scroll-snap-points-x: repeat(240px);
+  scroll-snap-points-x: repeat(240px);
+  -webkit-scroll-snap-type: mandatory;
+  -ms-scroll-snap-type: mandatory;
+  scroll-snap-type: mandatory;
   margin: 0 auto;
+  display: flex;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
-  .about-me-sec .about-me-sec__main {
+  .about-me-sec .about-me-list {
     width: 282px;
+    -webkit-scroll-snap-points-x: repeat(282px);
+    -ms-scroll-snap-points-x: repeat(282px);
+    scroll-snap-points-x: repeat(282px);
     position: absolute;
     top: 103px;
     right: 80px;
@@ -1541,10 +1549,30 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-  .about-me-sec .about-me-sec__main {
+  .about-me-sec .about-me-list {
     width: 360px;
+    -webkit-scroll-snap-points-x: repeat(360px);
+    -ms-scroll-snap-points-x: repeat(360px);
+    scroll-snap-points-x: repeat(360px);
     top: 229px;
     right: 95px;
+  }
+}
+
+.about-me-sec .about-me-sec__main {
+  width: 240px;
+  flex-shrink: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-sec .about-me-sec__main {
+    width: 282px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about-me-sec .about-me-sec__main {
+    width: 360px;
   }
 }
 
@@ -1608,45 +1636,129 @@ body {
   }
 }
 
-.about-me-sec .about-me-sec__main .list-dot {
+.about-me-sec .list-dot {
   gap: 9px;
   display: flex;
   position: absolute;
-  bottom: -50px;
+  bottom: 20px;
   right: 50%;
   transform: translateX(50%);
 }
 
 @media screen and (min-width: 768px) {
-  .about-me-sec .about-me-sec__main .list-dot {
-    display: block;
-    top: 0;
-    right: -42px;
+  .about-me-sec .list-dot {
+    flex-direction: column;
+    top: 179px;
+    right: 42px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .about-me-sec .about-me-sec__main .list-dot {
-    right: -89px;
+  .about-me-sec .list-dot {
+    gap: 11px;
+    top: 335px;
+    right: 0;
   }
 }
 
-.about-me-sec .about-me-sec__main .list-dot .list-dot__item {
-  width: 10px;
+.about-me-sec .list-dot .list-dot__item {
   height: 10px;
+  width: 10px;
   border: 2px solid #fff;
   border-radius: 50%;
-  margin-bottom: 10px;
+  display: inline-block;
 }
 
-@media screen and (min-width: 1200px) {
-  .about-me-sec .about-me-sec__main .list-dot .list-dot__item {
-    margin-bottom: 12px;
+.about-me-sec .list-dot .list-dot__animation {
+  z-index: -1;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+}
+
+.about-me-sec .list-dot .start-first, .about-me-sec .list-dot .list-dot__item:nth-child(1):hover ~ .list-dot__animation {
+  left: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-sec .list-dot .start-first, .about-me-sec .list-dot .list-dot__item:nth-child(1):hover ~ .list-dot__animation {
+    top: 0;
   }
 }
 
-.about-me-sec .about-me-sec__main .list-dot :nth-child(1) {
-  background-color: #fff;
+.about-me-sec .list-dot .list-dot__item:nth-child(2):hover ~ .list-dot__animation {
+  left: 19px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-sec .list-dot .list-dot__item:nth-child(2):hover ~ .list-dot__animation {
+    top: 19px;
+    left: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about-me-sec .list-dot .list-dot__item:nth-child(2):hover ~ .list-dot__animation {
+    top: 21px;
+    left: 0;
+  }
+}
+
+.about-me-sec .list-dot .list-dot__item:nth-child(3):hover ~ .list-dot__animation {
+  left: 39px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-sec .list-dot .list-dot__item:nth-child(3):hover ~ .list-dot__animation {
+    top: 39px;
+    left: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about-me-sec .list-dot .list-dot__item:nth-child(3):hover ~ .list-dot__animation {
+    top: 41px;
+    left: 0;
+  }
+}
+
+.about-me-sec .list-dot .list-dot__item:nth-child(4):hover ~ .list-dot__animation {
+  left: 57px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-sec .list-dot .list-dot__item:nth-child(4):hover ~ .list-dot__animation {
+    top: 57px;
+    left: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about-me-sec .list-dot .list-dot__item:nth-child(4):hover ~ .list-dot__animation {
+    top: 63px;
+    left: 0;
+  }
+}
+
+.about-me-sec .list-dot .list-dot__item:nth-child(5):hover ~ .list-dot__animation {
+  left: 77px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-sec .list-dot .list-dot__item:nth-child(5):hover ~ .list-dot__animation {
+    top: 77px;
+    left: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about-me-sec .list-dot .list-dot__item:nth-child(5):hover ~ .list-dot__animation {
+    top: 84px;
+    left: 0;
+  }
 }
 
 .contact-sec {

@@ -16,26 +16,58 @@
 
   .container {
     height: 100%;
-    @include tablet {
-      position: relative;
-    }
+    position: relative;
   }
 
-  .about-me-sec__main {
+  .about-me-list {
+    display: flex;
+    overflow: hidden;
     width: 240px;
     margin: 0 auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    -webkit-scroll-snap-points-x: repeat(240px);
+    -ms-scroll-snap-points-x: repeat(240px);
+    scroll-snap-points-x: repeat(240px);
+    -webkit-scroll-snap-type: mandatory;
+    -ms-scroll-snap-type: mandatory;
+    scroll-snap-type: mandatory;
 
     @include tablet {
       width: 282px;
       position: absolute;
       right: 80px;
       top: 103px;
+      -webkit-scroll-snap-points-x: repeat(282px);
+      -ms-scroll-snap-points-x: repeat(282px);
+      scroll-snap-points-x: repeat(282px);
     }
 
     @include desktop {
       width: 360px;
       top: 229px;
       right: 95px;
+      -webkit-scroll-snap-points-x: repeat(360px);
+      -ms-scroll-snap-points-x: repeat(360px);
+      scroll-snap-points-x: repeat(360px);
+    }
+  }
+
+  .about-me-sec__main {
+    width: 240px;
+    flex-shrink: 0;
+
+    @include tablet {
+      width: 282px;
+      // position: absolute;
+      // right: 80px;
+      // top: 103px;
+    }
+
+    @include desktop {
+      width: 360px;
+      // top: 229px;
+      // right: 95px;
     }
 
     .about-me-sec__title {
@@ -86,38 +118,103 @@
         line-height: 24px;
       }
     }
+  }
 
-    .list-dot {
+  .list-dot {
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    gap: 9px;
+    right: 50%;
+    transform: translateX(50%);
+
+    @include tablet {
+      flex-direction: column;
+      right: 42px;
+      top: 179px;
+    }
+
+    @include desktop {
+      top: 335px;
+      right: 0px;
+      gap: 11px;
+    }
+    .list-dot__item {
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      border: 2px solid $white;
+      display: inline-block;
+    }
+
+    .list-dot__animation {
       position: absolute;
-      display: flex;
-      bottom: -50px;
-      gap: 9px;
-      right: 50%;
-      transform: translateX(50%);
+      z-index: -1;
+      background-color: white;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      top: 0;
+    }
+
+    & .start-first,
+    .list-dot__item:nth-child(1):hover ~ .list-dot__animation {
+      left: 0;
 
       @include tablet {
-        display: block;
-        right: -42px;
         top: 0;
+      }
+    }
+
+    .list-dot__item:nth-child(2):hover ~ .list-dot__animation {
+      left: 19px;
+      @include tablet {
+        top: 19px;
+        left: 0;
       }
 
       @include desktop {
-        right: -89px;
+        top: 21px;
+        left: 0;
       }
-      .list-dot__item {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        border: 2px solid $white;
-        margin-bottom: 10px;
+    }
 
-        @include desktop {
-          margin-bottom: 12px;
-        }
+    .list-dot__item:nth-child(3):hover ~ .list-dot__animation {
+      left: 39px;
+      @include tablet {
+        top: 39px;
+        left: 0;
       }
 
-      & :nth-child(1) {
-        background-color: white;
+      @include desktop {
+        top: 41px;
+        left: 0;
+      }
+    }
+
+    .list-dot__item:nth-child(4):hover ~ .list-dot__animation {
+      left: 57px;
+      @include tablet {
+        top: 57px;
+        left: 0;
+      }
+
+      @include desktop {
+        top: 63px;
+        left: 0;
+      }
+    }
+
+    .list-dot__item:nth-child(5):hover ~ .list-dot__animation {
+      left: 77px;
+      @include tablet {
+        top: 77px;
+        left: 0;
+      }
+
+      @include desktop {
+        top: 84px;
+        left: 0;
       }
     }
   }
