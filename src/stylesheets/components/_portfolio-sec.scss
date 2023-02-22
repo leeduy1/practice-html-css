@@ -1,16 +1,9 @@
 @use "../abstracts/" as *;
 
 .portfolio-sec {
-  padding-top: 29px;
-  padding-bottom: 71px;
-
-  @include tablet {
-    padding-top: 26px;
-  }
-
-  @include desktop {
-    padding-top: 66px;
-  }
+  height: 100vh;
+  display: flex;
+  align-items: center;
 
   .portfolio-sec__title {
     text-align: center;
@@ -38,6 +31,18 @@
   .portfolio-sec__list-image {
     display: flex;
     flex-wrap: wrap;
+
+    max-height: 500px;
+    overflow: hidden;
+
+    @include tablet {
+      max-height: max-content;
+    }
+
+    @include desktop {
+      max-height: 380px;
+      overflow: hidden;
+    }
 
     .list-image__item {
       img {

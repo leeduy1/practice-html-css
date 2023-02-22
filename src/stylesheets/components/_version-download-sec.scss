@@ -2,18 +2,22 @@
 
 .version-download-sec {
   @include bg-img("../assets/images/version/version.svg");
-  height: 312px;
+  // height: 312px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  padding-top: 45px;
+  // padding-top: 45px;
 
   @include tablet {
-    height: 314px;
-    padding-top: 57px;
+    // height: 314px;
+    // padding-top: 57px;
   }
 
   @include desktop {
-    height: 588px;
-    padding-top: 163px;
+    // height: 588px;
+    // padding-top: 163px;
   }
 
   .version-download-sec__title {

@@ -2,17 +2,7 @@
 
 .contact-sec {
   padding-top: 23px;
-  padding-bottom: 42px;
-
-  @include tablet {
-    padding-top: 34px;
-    padding-bottom: 40px;
-  }
-
-  @include desktop {
-    padding-top: 67px;
-    padding-bottom: 0;
-  }
+  height: 100vh;
 
   .contact-sec__title {
     font-size: 20px;

@@ -21,6 +21,67 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
+      var deviceAgent = navigator.userAgent.toLowerCase();
+      var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
+      if (agentID || $(window).width() <= 1024) {
+        // its mobile screen
+        $.scrollify.destroy();
+        $("section").removeClass("scroll").removeAttr("style");
+        $.scrollify.disable();
+      } else {
+        // its desktop
+        $("section").addClass("scroll");
+        applyScroll();
+        $.scrollify.enable();
+      }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"
+      integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        screenCheck();
+      });
+
+      $(window).on("resize", function () {
+        screenCheck();
+      });
+
+      function applyScroll() {
+        $.scrollify({
+          section: ".scroll",
+          sectionName: "section-name",
+          //standardScrollElements: 'section',
+          easing: "easeOutExpo",
+          scrollSpeed: 500,
+          offset: 0,
+          scrollbars: true,
+          setHeights: false,
+          overflowScroll: true,
+          updateHash: false,
+          touchScroll: true,
+        });
+      }
+
+      function screenCheck() {
+        var deviceAgent = navigator.userAgent.toLowerCase();
+        var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
+        if (agentID || $(window).width() <= 1024) {
+          // its mobile screen
+          $.scrollify.destroy();
+          $("section").removeClass("scroll").removeAttr("style");
+          $.scrollify.disable();
+        } else {
+          // its desktop
+          $("section").addClass("scroll");
+          applyScroll();
+          $.scrollify.enable();
+        }
+      }
     </script>
   </body>
 </html>

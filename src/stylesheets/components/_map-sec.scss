@@ -1,15 +1,16 @@
 @use "../abstracts/" as *;
 
 .map-sec {
-  height: 268px;
+  // height: 268px;
   position: relative;
+  height: 50vh;
 
   @include tablet {
-    height: 216px;
+    // height: 216px;
   }
 
   @include desktop {
-    height: 400px;
+    // height: 400px;
     background-color: #d8d8d8;
   }
 

@@ -2,28 +2,29 @@
 
 header {
   @include bg-img("../assets/images/Banner/Banner1.jpg");
-  height: 540px;
+  height: 100vh;
 
-  @include tablet {
-    height: 564px;
-  }
-
-  @include desktop {
-    height: 768px;
+  .container {
+    height: 100%;
   }
 
   .introduce-sec {
     width: 240px;
-    margin: 100px auto 0;
+    margin: 0 auto;
     text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     @include tablet {
       width: 524px;
-      margin-top: 75px;
+      transform: translateY(-60px) !important;
     }
 
     @include desktop {
       width: 555px;
+      transform: translateY(-90px) !important;
     }
 
     .introduce-sec__message {
