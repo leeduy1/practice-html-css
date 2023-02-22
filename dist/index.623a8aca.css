@@ -497,6 +497,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .testimonials-sec .testimonials-sec__list-card {
+    height: auto;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;

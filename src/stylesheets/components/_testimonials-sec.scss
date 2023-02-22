@@ -17,11 +17,6 @@
     }
   }
 
-  @include desktop {
-    // padding-top: 32px;
-    // padding-bottom: 47px;
-  }
-
   .testimonials-sec__title {
     font-size: 20px;
     line-height: 40px;
@@ -45,6 +40,7 @@
     height: 555px;
     overflow: hidden;
     @include tablet {
+      height: auto;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
